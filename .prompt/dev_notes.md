@@ -6,4 +6,4 @@ Before I get into the content of these pages, I want to do some preparation for 
 
 Yes, I would like a dark mode toggle and the implementation of a refined color scale.
  - Added theme.js
-
+The dark mode toggle doesn't have memory across the different pages (it switches back and forth based on each page). Make it where the theme is preserved across the site, no matter what page it is changed on

@@ -7,16 +7,16 @@
   <meta name="description" content="Homepage for Myles Sparks personal website." />
   <link rel="stylesheet" href="styles.css" />
   <script>
-    // Early theme application to prevent FOUC
+    // Early theme application to prevent FOUC + persist across pages
     (function() {
       try {
+        var name = window.name || '';
+        var match = name.match(/(?:^|;)__THEME__:(dark|light)(?:;|$)/);
         var stored = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var theme = stored || (prefersDark ? 'dark' : 'light');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored || (match ? match[1] : null) || (prefersDark ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', theme);
-      } catch (e) {
-        // no-op
-      }
+      } catch (e) {}
     })();
   </script>
 </head>
