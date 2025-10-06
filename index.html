@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Myles Sparks</title>
   <meta name="description" content="Homepage for Myles Sparks personal website." />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Early theme application to prevent FOUC
+    (function() {
+      try {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        // no-op
+      }
+    })();
+  </script>
 </head>
 <body>
   <header>
@@ -19,6 +33,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false" title="Toggle theme">🌙</button>
     </div>
   </header>
 
@@ -32,6 +47,7 @@
       <small>&copy; 2025 Myles Sparks. All rights reserved.</small>
     </div>
   </footer>
+  <script src="theme.js" defer></script>
 </body>
 </html>
 

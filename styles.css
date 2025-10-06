@@ -1,0 +1,207 @@
+:root {
+  /* Neutral, professional blue/gray theme */
+  --bg: #ffffff;
+  --surface: #f8fafc; /* slate-50 */
+  --text: #0f172a; /* slate-900 */
+  --muted: #475569; /* slate-600 */
+  --border: #e2e8f0; /* slate-200 */
+  --accent: #2563eb; /* blue-600 */
+  --accent-hover: #1d4ed8; /* blue-700 */
+  --accent-contrast: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Typography */
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+h1 { font-size: 2rem; font-weight: 700; }
+h2 { font-size: 1.5rem; font-weight: 700; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+
+p { margin: 0 0 1rem; }
+small { color: var(--muted); }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.brand {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.nav a:hover {
+  background: var(--surface);
+}
+
+.nav a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.nav a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+main.container {
+  padding: 32px 0;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+}
+
+footer .container {
+  padding: 16px 0;
+  color: var(--muted);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover { color: var(--accent-hover); }
+
+/* Media, images, and general elements */
+img, video { max-width: 100%; height: auto; }
+
+/* Selection and focus accessibility */
+::selection { background: var(--accent); color: var(--accent-contrast); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Responsive layout */
+@media (max-width: 640px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  main.container {
+    padding: 24px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container { max-width: 1100px; }
+  main.container { padding: 48px 0; }
+}
+
+/* --------------------------------------------------
+   Refined color scales and dark theme
+   -------------------------------------------------- */
+/* Optional extended scales (not all used yet) */
+:root {
+  --accent-50: #eff6ff;
+  --accent-100: #dbeafe;
+  --accent-200: #bfdbfe;
+  --accent-300: #93c5fd;
+  --accent-400: #60a5fa;
+  --accent-500: #3b82f6;
+  --accent-600: #2563eb;
+  --accent-700: #1d4ed8;
+  --accent-800: #1e40af;
+  --accent-900: #1e3a8a;
+
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1f2937;
+  --slate-900: #0f172a;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --bg: #0b1220;
+  --surface: #111827; /* near slate-900 */
+  --text: #e5e7eb; /* gray-200 */
+  --muted: #9ca3af; /* gray-400 */
+  --border: #1f2937; /* slate-800 */
+  --accent: #60a5fa; /* blue-400 */
+  --accent-hover: #93c5fd; /* blue-300 */
+  --accent-contrast: #0b1220;
+}
+
+/* Smooth theme transitions */
+html { color-scheme: light dark; }
+body, header, footer, .nav a, .brand { transition: background-color 150ms ease, color 150ms ease; }
+
+/* Theme toggle button */
+.theme-toggle {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover { background: var(--surface); }
+.theme-toggle:active { transform: translateY(0.5px); }
+
+
