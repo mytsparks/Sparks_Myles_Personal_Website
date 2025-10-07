@@ -12,7 +12,7 @@
 
 
 **Prompt** Yes, I would like a dark mode toggle and the implementation of a refined color scale.
- - Cursor added a theme.js file after this
+Note: Cursor added a theme.js file after this
 **Prompt** The dark mode toggle doesn't have memory across the different pages (it switches back and forth based on each page). Make it where the theme is preserved across the site, no matter what page it is changed on.
 **Prompt** Please completely remove the theme toggle, I just want the entire site to follow a corporate neutral blue/gray light theme.
 
