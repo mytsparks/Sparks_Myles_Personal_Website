@@ -6,40 +6,42 @@
   <title>Home | Myles Sparks</title>
   <meta name="description" content="Homepage for Myles Sparks personal website." />
   <link rel="stylesheet" href="styles.css" />
-  <script>
-    // Early theme application to prevent FOUC + persist across pages
-    (function() {
-      try {
-        var name = window.name || '';
-        var match = name.match(/(?:^|;)__THEME__:(dark|light)(?:;|$)/);
-        var stored = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var theme = stored || (match ? match[1] : null) || (prefersDark ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
-      } catch (e) {}
-    })();
-  </script>
+ 
 </head>
 <body>
   <header>
     <div class="container">
       <a href="index.html" class="brand">Myles Sparks</a>
-      <nav aria-label="Primary">
-        <ul class="nav">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false" title="Toggle theme">🌙</button>
     </div>
   </header>
 
   <main class="container">
-    <h1>Welcome</h1>
-    <p>Welcome to my personal website. Explore to learn more about me and my work.</p>
+    <section class="hero">
+      <h1>Myles Sparks</h1>
+      <p>I’m a dedicated professional focused on building thoughtful solutions with modern, reliable tools. Explore to learn more about my background, experience, and recent work.</p>
+    </section>
+
+    <section class="quick-nav" aria-labelledby="quick-nav-heading">
+      <h2 id="quick-nav-heading" class="visually-hidden">Explore sections</h2>
+      <div class="grid">
+        <a class="card" href="about.html">
+          <h3>About Me</h3>
+          <p>Who I am, what I’m working on, and what I value.</p>
+        </a>
+        <a class="card" href="resume.html">
+          <h3>Resume</h3>
+          <p>Experience, education, and skills—all in one place.</p>
+        </a>
+        <a class="card" href="projects.html">
+          <h3>Projects</h3>
+          <p>Selected work showcasing problem-solving and delivery.</p>
+        </a>
+        <a class="card" href="contact.html">
+          <h3>Contact</h3>
+          <p>Get in touch for opportunities or collaborations.</p>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -47,7 +49,6 @@
       <small>&copy; 2025 Myles Sparks. All rights reserved.</small>
     </div>
   </footer>
-  <script src="theme.js" defer></script>
 </body>
 </html>
 

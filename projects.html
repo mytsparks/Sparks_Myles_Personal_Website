@@ -6,18 +6,7 @@
   <title>Projects | Myles Sparks</title>
   <meta name="description" content="Projects by Myles Sparks." />
   <link rel="stylesheet" href="styles.css" />
-  <script>
-    (function() {
-      try {
-        var name = window.name || '';
-        var match = name.match(/(?:^|;)__THEME__:(dark|light)(?:;|$)/);
-        var stored = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var theme = stored || (match ? match[1] : null) || (prefersDark ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
-      } catch (e) {}
-    })();
-  </script>
+ 
 </head>
 <body>
   <header>
@@ -32,13 +21,54 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false" title="Toggle theme">🌙</button>
     </div>
   </header>
 
   <main class="container">
-    <h1>Projects</h1>
-    <p>A selection of the work and experiments I’m proud of.</p>
+    <section class="projects-intro">
+      <h1>Projects</h1>
+      <p class="lead">A selection of work spanning analytics, user experience, and web development.</p>
+    </section>
+
+    <section class="project-card">
+      <div class="project-header">
+        <h2>Student Privacy Dashboard (Functional Prototype)</h2>
+      </div>
+      <div class="project-body">
+        <p>This prototype explores how students can easily understand and manage their digital privacy posture across systems. It consolidates key privacy controls, data access logs, and risk indicators into one experience, emphasizing clarity and actionability. The goal is to turn a complex, fragmented problem into a guided, student‑friendly workflow.</p>
+        <div class="gallery">
+          <figure class="gallery-item">
+            <img src="images/Dashboard_1.png" alt="Student Privacy Dashboard prototype screenshot 1" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/Dashboard_2.png" alt="Student Privacy Dashboard prototype screenshot 2" />
+          </figure>
+        </div>
+        <div class="project-actions">
+          <a class="btn btn-primary" href="https://2767aa172f5f482e8e498017991b4fe9-main.projects.builder.my/" target="_blank" rel="noopener">Dashboard Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-card">
+      <div class="project-header">
+        <h2>Fast Curve Racing Events — Informational Website</h2>
+      </div>
+      <div class="project-body">
+        <p>A responsive HTML site for a racing events company highlighting events, registration, and brand storytelling. The build focuses on quick load times, clean information hierarchy, and a modern blue/gray aesthetic consistent with the rest of my portfolio.</p>
+        <div class="gallery">
+          <figure class="gallery-item">
+            <img src="images/FCRE1.png" alt="FCRE website screenshot 1" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/FCRE2.png" alt="FCRE website screenshot 2" />
+          </figure>
+        </div>
+        <div class="project-actions">
+          <a class="btn btn-primary" href="https://mytspark.pages.iu.edu/FCRE3/" target="_blank" rel="noopener">FCRE Webpage</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -46,7 +76,6 @@
       <small>&copy; 2025 Myles Sparks. All rights reserved.</small>
     </div>
   </footer>
-  <script src="theme.js" defer></script>
 </body>
 </html>
 
