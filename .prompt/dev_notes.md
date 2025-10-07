@@ -1,5 +1,6 @@
 # AI Prompt Log
 ## Myles Sparks
+## Github Link: https://github.com/mytsparks/Sparks_Myles_Personal_Website
 
 **Prompt** I want to create a personal website using html and css. The first step is to set up the pages. I want a Homepage (index.html), About Me (about.html), Resume (resume.html), Projects (projects.html), Contact (contact.html). Set these up with proper html formatting. Also set up a css styles file, and connect it to all of the html pages.
 

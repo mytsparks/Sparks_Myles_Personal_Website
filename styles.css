@@ -45,24 +45,21 @@ small { color: var(--muted); }
   padding: 0 16px;
 }
 
-header {
+/* Top banner on home */
+.top-banner {
+  width: 100%;
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(90deg, rgba(37,99,235,0.10), rgba(37,99,235,0.04));
+  background: #fff;
+  overflow: hidden;
 }
-
-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
+.top-banner img {
+  display: block;
+  width: 100%;
+  height: clamp(80px, 12vw, 140px);
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
 }
-
-.brand {
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--text);
-}
-.brand:hover { color: var(--accent); }
 
 .nav {
   list-style: none;
@@ -110,6 +107,22 @@ main.container {
 
 .hero h1 { font-size: 2.25rem; }
 .hero p { max-width: 720px; margin: 0.5rem auto 0; color: var(--muted); }
+
+/* Kelley banner */
+.kelley-banner { padding: 8px 0 28px; }
+.kelley-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff, #f7faff);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.08);
+  padding: 14px;
+}
+.kelley-card img {
+  display: block;
+  margin: 0 auto;
+  max-height: 120px;
+  width: auto;
+}
 
 /* Quick navigation grid */
 .quick-nav { padding: 12px 0 32px; }
