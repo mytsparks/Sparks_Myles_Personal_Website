@@ -61,6 +61,26 @@ small { color: var(--muted); }
   padding: 0;
 }
 
+/* Site header (non-home pages) */
+header {
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, rgba(37,99,235,0.10), rgba(37,99,235,0.04));
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.brand {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+.brand:hover { color: var(--accent); }
+
 .nav {
   list-style: none;
   display: flex;
